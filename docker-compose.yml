@@ -1,0 +1,33 @@
+version: '3'
+services:
+  botpress:
+    image: botpress/server:latest
+    ports:
+      - "3000:8080"
+      - "3100:3100"
+      - "4000:4000"
+      - "8081:8081"
+    volumes:
+      - botpress_data:/botpress/data
+    environment:
+      - PORT=8080
+      - BP_HOST=0.0.0.0
+      - NODE_ENV=production
+      - PG_HOST=db
+      - PG_PORT=5432
+      - PG_USER=bp_user
+      - PG_PASSWORD=123456789
+      - PG_SSL=false
+    depends_on:
+      - db
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=bp_user
+      - POSTGRES_PASSWORD=123456789
+      - POSTGRES_DB=botpress
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  botpress_data:
+  postgres_data:
