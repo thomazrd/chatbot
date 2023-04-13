@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@botpress/node-svm@0.0.3":
+"@botpress/node-svm@0.0.4":
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@botpress/node-svm/-/node-svm-0.0.3.tgz#f116e71d7334d121df85d368b241986a4d3da1a4"
   integrity sha512-65ZAiWrNMeuZRLbCqqXDBk0txxphYTBRx1554UTF3Y/frGEuA7Zs8XNPTlLeBfcz16XFdRw99WERTYQbexjLwA==
